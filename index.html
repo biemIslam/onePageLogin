@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Page</title>
+	<link rel="stylesheet" type="text/css" href="loginPage.css">
+	 <link rel="stylesheet" href="font-awesome-4.7.1/css/font-awesome.min.css">
+</head>
+<body>
+
+	<main>
+		<div class="container">
+			<div id="header">
+				 <p> Signup Now </p>
+			</div>
+			<div id="body">
+				<form action="" id="myForm" method="post">
+					<div> <p id="display_message"></p> </div>
+					<div class="div-group">
+						<div id="user-icon">
+							<i class="fa fa-user-circle" style="font-size: 30px"></i>
+						</div>
+						<div id="users">
+							<input type="text" name="username" placeholder="Username" id="username">
+						</div>
+					</div> 
+					<div class="div-group">
+						<div id="secure-icon">
+							<i class="fa fa-unlock-alt" style="font-size: 35px; width:30px;"></i>
+						</div>
+						<div id="secure">
+							<input type="password" name="password" placeholder="Enter password" id="password">
+						</div>
+					</div>	
+					<div id="button">
+						<!-- <button type="submit" onclick="confirmEntry()">Login</button> -->
+						 <input type="button" name="submit" value="Login" onclick="confirmEntry()">
+					</div> 
+					<p> <a href="#"> Forgot Password? </a></p>
+					<p> <a href="../regPage/index.html"> New Register? </a></p>
+				</form>
+			</div>
+		</div>
+	</main>
+	<script type="text/javascript">
+		function confirmEntry(){
+			var username = document.getElementById('username').value;
+			// form elements collection can also be used to get form element value
+			// document.getElementById('myForm').elements.namedItem('username').value;
+			
+			var password = document.getElementById('password').value;
+
+			// document.getElementById('myForm').elements.namedItem('password').value;
+
+			if (username == "" || password == "") {
+				document.getElementById('display_message').innerHTML = "Please enter your user name or password";
+				// alert("Please enter your username or password");
+			}
+			else{
+				document.getElementById('display_message').innerHTML = "You have successfully logged in";
+				// alert("You have successfully logged in");
+			}
+		}
+	</script>
+</body>
+</html>
